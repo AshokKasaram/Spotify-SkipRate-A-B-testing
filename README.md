@@ -1,2 +1,22 @@
 # Spotify-SkipRate-A-B-testing
 This project simulates an A/B test to evaluate whether switching from a popularity-based recommender to a collaborative-filtering variant reduces skip rates in algorithmic playlists (e.g., Discover Weekly, Daily Mix).
+
+# Skip Rate Experiment — Algorithmic Playlist Quality (A/B Test)
+
+**Goal:** Reduce early **skip rate** in algorithmic playlists by switching from a popularity-based recommender (A) to a collaborative-filtering variant (B).
+
+## Quick Start
+1. Open `Spotify_SkipRate_AB_Test.ipynb` and run all cells.
+2. Tweak the CONFIG section to explore different effect sizes or sample sizes.
+3. Check `RESULTS.md` for a concise readout and `sessions_simulated.csv` for the simulated dataset.
+
+## Metrics
+- **Primary:** Skip rate (≤ 30s skip proxy) — lower is better
+- **Secondary:** Save rate (higher is better), Session minutes (higher is better)
+
+## Decision Template
+If skip rate decreases and saves/session minutes increase with statistical significance,  
+recommend a **staged ramp (10–25%)** with guardrails (complaints, churn proxies) and cohort monitoring (device/time-of-day).
+
+---
+
